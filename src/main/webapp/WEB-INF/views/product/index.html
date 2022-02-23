@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="https://thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="https://thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>Index all from Data Base</title>
+</head>
+<body>
+
+<div th:each="some_product : ${some_product}">
+    <p th:text="'Name: ' + ${some_product.getName()}">VALUE</p>
+    <p th:text="'Price: ' + ${some_product.getPrice()}">VALUE</p>
+    <p th:text="'Description: ' + ${some_product.getDescription()}">VALUE</p>
+    <hr/>
+</div>
+
+<a href="/product/new">Add new product</a>
+</body>
+</html>
