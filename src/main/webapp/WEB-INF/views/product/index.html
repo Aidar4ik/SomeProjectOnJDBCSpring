@@ -4,15 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Index all from Data Base</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
+
 <div th:each="some_product : ${some_product}">
+    <table>
+        <tbody>
+        <tr>
+            <td th:text="'Name: ' + ${some_product.getName()}">VALUE</td>
+            <td th:text="'Price: ' + ${some_product.getPrice()}">VALUE</td>
+            <td th:text="'Description: ' + ${some_product.getDescription()}">VALUE</td>
+        </tr>
+        </tbody>
+    </table>
     <p th:text="'Name: ' + ${some_product.getName()}">VALUE</p>
     <p th:text="'Price: ' + ${some_product.getPrice()}">VALUE</p>
     <p th:text="'Description: ' + ${some_product.getDescription()}">VALUE</p>
-    <hr/>
 </div>
+
 
 <a href="/product/new">Add new product</a>
 </body>
